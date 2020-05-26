@@ -21,7 +21,7 @@ those not recently accessed could be evicted.
 So, if you try to add a new value using the "put" method, but the cache is full then automatically the cache manager will evict the oldest value.
 
 ### coding example
-> **Behttps://github.com/DanyelMorales/Cacheware of**  The code fence below. It shows a coding example with no exception handling.
+> **Beware of**  The code fence below. It shows a coding example with no exception handling.
 ```
           int cacheSize = 2;
           Cache<Integer, Integer> cache = new Cache<>(cacheSize);
