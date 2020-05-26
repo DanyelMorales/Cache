@@ -67,10 +67,10 @@ Below is the information we need to represent using the cache manager.
 Where K is the resource identifier, V is the value represented by K and timestamp is the moment of the operation.
 
 Basically, we need to create a relation among the Key, the value and the timestamp. The idea is simple: Store the key sorted by time and store the value related to key. 
-The relation between K and V is handled by a Hashmap and the relation between K and timestamp we use a SortedTreeMap.
+The relation between K and V is handled by a Hashmap, and it's used a SortedTreeMap to handle the relation between K and timestamp .
 
 ### Classes
 
-* __Cache.java__ :  cache manager, handle key and value using a CacheData instance which is a pojo.
+* __Cache.java__ :  cache manager that handles the key, and the value by using a CacheData instance which is a pojo.
 * __CacheData.java__: Pojo to ease the data handling between cache manager and TimeStampLog instance
-* __TimeStampLog.java__: Helper class, makes it easy to sort and handle K and timestamp sorted by time.
+* __TimeStampLog.java__: Helper class, makes it easy to sort the K by its timestamp.
