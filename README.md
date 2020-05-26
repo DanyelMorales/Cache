@@ -1,7 +1,7 @@
 <a href="https://www.buymeacoffee.com/DanielVeraM" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 41px!important;width: 174px!important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" height="41px" width="174px" /></a>
 
 # Custom Cache
-This project is a coding test suggested by a java recruiter. The main goal is to create a Cache with a fixed size.
+This project is a coding test suggested by a java recruiter. The main goal is to create a Cache Manager with a fixed size.
 
 > Warning: This code is not thread safe
 
@@ -9,7 +9,7 @@ This project is a coding test suggested by a java recruiter. The main goal is to
 Every cache instance must have a size. This size is the number of elements inside the cache container. 
 When the cache is full the oldest element will be evicted. When you add a new value to the registry, the cache manager creates a timestamp to handle the life of the registry.
 
-Every operation on the cache manager should update the timestamp of the accessed object, therefore
+Every operation over the cache manager should update the timestamp of the accessed object, therefore
 those not recently accessed could be evicted.  
 
 **Operations that updates the timestamp are:**
