@@ -1,31 +1,9 @@
 <a href="https://www.buymeacoffee.com/DanielVeraM" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 41px!important;width: 174px!important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" height="41px" width="174px" /></a>
 
 # Custom Cache
-This project is a coding test suggested by a java recruiter. The main goal is create a Cache with a fixed size.
+This project is a coding test suggested by a java recruiter. The main goal is to create a Cache with a fixed size.
 
 > Warning: This code is not thread safe
-
-
-## Background operation
-### Data representation
-Below is the information we need to represent using the cache manager.
-
-| k | V | Timestamp |   |   |
-|--------|----------|----------|---|---|
-| image1 | img1.jpg | 121212    |   |   |
-| image2 | img2.png | 232323    |   |   |
-| image3 | img3.png | 121212    |   |   |
-
-Where K is the resource identifier, V is the value represented by K and timestamp is the moment of the operation.
-
-Basically, we need to create a relation among the Key, the value and the timestamp. The idea is simple: Store the key sorted by time and store the value related to key. 
-The relation between K and V is handled by a Hashmap and the relation between K and timestamp we use a SortedTreeMap.
-
-### Classes
-
-* __Cache.java__ :  cache manager, handle key and value using a CacheData instance which is a pojo.
-* __CacheData.java__: Pojo to ease the data handling between cache manager and TimeStampLog instance
-* __TimeStampLog.java__: Helper class, makes it easy to sort and handle K and timestamp sorted by time.
 
 ## Usage
 Every cache instance must have a size. This size is the number of elements inside the cache container. 
@@ -75,3 +53,24 @@ So, if you try to add a new value using the "put" method, but the cache is full 
 ```
 
 3. Play around with the operations by reading the javadoc.
+
+## Background operation
+### Data representation
+Below is the information we need to represent using the cache manager.
+
+| k | V | Timestamp |   |   |
+|--------|----------|----------|---|---|
+| image1 | img1.jpg | 121212    |   |   |
+| image2 | img2.png | 232323    |   |   |
+| image3 | img3.png | 121212    |   |   |
+
+Where K is the resource identifier, V is the value represented by K and timestamp is the moment of the operation.
+
+Basically, we need to create a relation among the Key, the value and the timestamp. The idea is simple: Store the key sorted by time and store the value related to key. 
+The relation between K and V is handled by a Hashmap and the relation between K and timestamp we use a SortedTreeMap.
+
+### Classes
+
+* __Cache.java__ :  cache manager, handle key and value using a CacheData instance which is a pojo.
+* __CacheData.java__: Pojo to ease the data handling between cache manager and TimeStampLog instance
+* __TimeStampLog.java__: Helper class, makes it easy to sort and handle K and timestamp sorted by time.
